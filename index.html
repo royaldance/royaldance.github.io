@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        
-    </head>
-    <body>
-        <section id="app">
-            <article>
-            <p @mouseover="changeText();">Text</p>
-            <p>{{message}}</p>
-            <p :class="styleCSS">Цвет: {{styleCSS}}</p>
-            <input type="text" @input="styleCSS = $event.target.value">
-        </article>
-        <article>
-            <input type="text" @input="increment($event.target.value)">
-            <p>{{value}}</p>
-            <p>{{doubleValue}}</p>
-        </article>
-        <article>
-            <button @click="show = !show">Скрыть</button>
-                <p v-if="show">Test hiding</p>
-                <p v-else>{{showMess|lowerCase|capitalize}}</p>
-                <ul>
-                    <li v-for="(car,i) in cars">{{i+1}}.{{car.model}} скорость {{car.speed}}</li>
-                </ul>
-            </article>
-            <app-car></app-car>
-            <form>
-                    <label for="email">Email:<input type="email" id="email" placeholder="name@sss.com" v-model="user.email"></label>
-                    <label for="password">Password:<input type="password" id="password" v-model="user.password"></label>
-                    <label for="passwordConfirm">Password confirm:<input type="password" id="passwordConfirm" v-model="user.passwordConfirm"></label>
-                    <button type="submit" @click.prevent="registerUser">Register</button>
-                </form>
-        
-        </section>
-     
-        <section id="app2">
-                <hr>
-                <app-car></app-car>
-        </section>
-        <script src="js/main.js"></script>
-    </body>
+<head> 
+  
+  <title>Royal Dance Studio - Школа танцев, Киев, Левый берег</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Школа танцев для детей и взрослых. Киев, Лесной массив. Набор в группы по спортивным бальным (вальс, танго, ча-ча-ча, фокстрот, самба, румба...) и современным танцам">
+  <meta name="keywords" content="клуб бальных танцев киев,бальные танцы лесная, танцы левый берег,танцы для детей киев, уроки танцев киев, современные танцы киев">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento:400,700?1532868791">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic,700italic?1532868791">
+
+</head>
+<body>
+  
+    <header>
+     <h3>Вас приветствует школа танца</h3>
+            <h1 class="title-weebly">Royal Dance Studio</h1>
+          
+    </header>
+    
+    <section class="container">
+      <img class="photo" src="https://royal-dance.weebly.com/uploads/1/1/7/7/117732699/logo-2_orig.png" alt="Full logo" width="200px">
+      <p class="text-center">
+       К сожалению в данный момент наш сайт не доступен, так как мы работаем над его новой версией. Тем временем по всем вопросам просим обращаться по контактам, указанным ниже, или посетите наш <a href="https://dancermix.wixsite.com/royaldancestudio">старый сайт</a>. </p> 
+       <p class="text-center">Просим извинения за неудобства и надеемся на понимание! Сайт заработает уже очень скоро!</p>
+       <address class="text-center">
+        <p><a href="tel:+380638194252"><i class="fa fa-phone"></i>+38 063 819 42 52</a></p>
+        <p><a href="tel:+380965449506"><i class="fa fa-phone"></i>+38 096 544 95 06</a></p>
+        <p><a class="btn" target="_blank" href="https://www.facebook.com/Royal-Dance-Studio-1111966155499601/?fref=ts"><i class="fa fa-facebook-square"></i></a></p>
+         </address>
+    </section>
+    <br>
+    
+    <section class="container">
+      <figure>
+      <blockquote class="blockquote center">
+        <h3 class="text-left quotes">"</h3>
+        <p>Танцуйте и будьте счастливы!</p>
+        <h3 class="text-right quotes">"</h3>
+        <figcaption class="blockquote-footer">Станислав Попов</figcaption>
+      </blockquote>
+    </figure>
+    </section>
+    
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
 </html>
+
+
+
+
